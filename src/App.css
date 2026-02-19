@@ -1,0 +1,74 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.lotto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.ball-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2rem;
+  min-height: 80px;
+  align-items: center;
+}
+
+.ball {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.5s ease-out;
+}
+
+.placeholder {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.generate-btn {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #646cff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.generate-btn:hover {
+  background-color: #535bf2;
+}
+
+.generate-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
